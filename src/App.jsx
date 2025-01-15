@@ -115,7 +115,10 @@ function App() {
       </>
       :
       <div className='flex justify-center items-center h-screen'>
-        <i className=''>Connect Wallet to View</i>
+        <div className='flex-col'>
+          <i className='text-sm mx-2'>Connect Wallet to View</i>
+          <p className='text-xs mt-2 mx-2 bg-secondary p-2 rounded-md md:rounded-full'>A fully decentralized to-do application that stores no data in a database. Your tasks, your control, on the blockchain</p>
+        </div>
       </div>
     }
     </div>
