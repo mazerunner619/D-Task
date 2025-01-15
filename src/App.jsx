@@ -7,7 +7,6 @@ import { fetchAllTodos, deleteTodo, createTodo, editTodo, } from './utils/web3me
 import RefreshIcon from '@mui/icons-material/Refresh';
 import Edit from './components/Edit';
 function App() {
-
   const [Account, setAccount] = useState(null);
   const [Web3, setWeb3] = useState(null);
   const [Contract, setContract] = useState(null);
@@ -118,6 +117,7 @@ function App() {
         <div className='flex-col'>
           <i className='text-sm mx-2'>Connect Wallet to View</i>
           <p className='text-xs mt-2 mx-2 bg-secondary p-2 rounded-md md:rounded-full'>A fully decentralized to-do application that stores no data in a database. Your tasks, your control, on the blockchain</p>
+          <p className='text-xs mt-2 mx-2 bg-red-300 p-2 rounded-md md:rounded-full'>Make sure <b>Metamask Wallet</b> is installed</p>
         </div>
       </div>
     }
