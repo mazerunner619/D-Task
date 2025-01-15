@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .header-btn {
+        @apply mr-2 rounded-full border-2 cursor-pointer px-2 hover:shadow-lg;
+    }
+
+    .todo-input {
+        @apply p-2 outline-none mt-2 w-full rounded-full shadow-lg border-b-2;
+    }
+  }
