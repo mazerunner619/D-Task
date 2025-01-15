@@ -19,7 +19,7 @@ const Edit = ({close, todo, save, remove}) => {
     }
 
     const saveEdit = () => {
-        if(currTodo?.description !== "" && currTodo.deadline !== "" && (currTodo.description !== todo.description || currTodo.deadline !== todo.deadline))
+        if(currTodo?.description !== "" && currTodo.deadline !== "" && (currTodo.done !== todo.done || currTodo.description !== todo.description || currTodo.deadline !== todo.deadline))
             save(currTodo);
         else{
             alert('no changes made')
@@ -33,8 +33,11 @@ const Edit = ({close, todo, save, remove}) => {
             <div className='flex justify-between mb-2 text-primary'>
                 <ModeEditIcon />
                 <div>
+                    
+                    {/* <input type="checkbox" checked={currTodo.done} onChange={e => setCurrTodo({...currTodo, done: e.checked})}/> */}
                     {
-                        todo.done ? <CheckCircleIcon className='text-green-400'/> : <CheckBoxOutlineBlankIcon className='text-red-400'/>
+                        currTodo?.done ?
+                        <CheckCircleIcon onClick={() => setCurrTodo({...currTodo, done:false})} className='text-green-400'/> : <CheckBoxOutlineBlankIcon onClick={() => setCurrTodo({...currTodo, done:true})} className='text-red-400'/>
                     }
                     <DeleteIcon onClick={remove} className='text-red-400 cursor-pointer'/>
                 </div>
